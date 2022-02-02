@@ -1,7 +1,4 @@
 <template>
-  <div class="text-3xl">
-    Count: {{ count }}, Double count: {{ doubleCount }}, message: {{ message }}
-  </div>
   <div class="mt-2 flex space-x-2">
     <button @click.prevent="incState">state</button>
     <button @click.prevent="incAction">action</button>
@@ -11,6 +8,9 @@
     <button @click.prevent="asyncAction">async</button>
     <button @click.prevent="throwAction">throw</button>
   </div>
+    <div class="text-3xl mt-4">
+      Count: {{ count }}, Double count: {{ doubleCount }}, message: {{ message }}
+    </div>
 </template>
 
 <script setup lang="ts">

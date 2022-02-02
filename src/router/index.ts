@@ -13,6 +13,7 @@ import Router from "../pages/Router.vue";
 const routes: RouteRecordRaw[] = [
   { path: "/", component: Home },
   { path: "/posts", component: Posts },
+  { path: "/posts/:postId", component: Posts, props: true },
   { path: "/store", component: Store },
   { path: "/router", component: Router },
 ];
@@ -23,5 +24,9 @@ const routerOptions: RouterOptions = {
 };
 
 const router = createRouter(routerOptions);
+
+router.afterEach((to, from, failure) => {
+  console.log("Entered route: " + to.path);
+});
 
 export default router;
