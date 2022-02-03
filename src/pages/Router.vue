@@ -6,10 +6,12 @@
 </template>
 
 <script setup lang="ts">
-import { useRouter } from "vue-router";
+import { useRouter, useRoute } from "vue-router";
 
 const router = useRouter();
-// const { isReady } = router;
+const route = useRoute();
+
+console.log(route);
 
 const getRoutes = () => {
   const routes = router.getRoutes();

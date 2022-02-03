@@ -1,15 +1,14 @@
 <script setup lang="ts">
-// import { $fetch } from "ohmyfetch";
-// const posts = await $fetch<Post[]>(
-//   "https://jsonplaceholder.typicode.com/posts"
-// );
+import { defineProps } from "vue";
+
+defineProps<{
+  post: Post;
+}>();
 </script>
 
 <template>
-  post here
-  <!-- <ul class="flex flex-col space-y-4">
-    <li v-for="post in posts">
-      {{ post.title }}
-    </li>
-  </ul>   -->
+  <article>
+    <h1 class="text-lg font-semibold">{{ post.title }}</h1>
+    <div class="text-sm mt-1">{{ post.body }}</div>
+  </article>
 </template>

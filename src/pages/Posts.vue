@@ -1,5 +1,5 @@
 <template>
-  <div class="flex">
+  <div class="flex space-x-10">
     <div class="w-1/2">
       <Suspense>
         <template #default>
@@ -11,14 +11,9 @@
       </Suspense>
     </div>
     <div class="w-1/2">
-      <Suspense>
-        <template #default>
-          <PostItem />
-        </template>
-        <template #fallback>
-          <div>Loading ...</div>
-        </template>
-      </Suspense>
+      <div class="fixed pr-3">
+        <PostItem v-if="post" :post="post" />
+      </div>
     </div>
   </div>
 </template>
@@ -26,8 +21,23 @@
 <script setup lang="ts">
 import PostList from "../components/PostList.vue";
 import PostItem from "../components/PostItem.vue";
-import { defineProps } from "vue";
-defineProps<{
+import { $fetch } from "ohmyfetch";
+import { defineProps, computed, watch, ref, toRef } from "vue";
+const props = defineProps<{
   postId?: number;
 }>();
+
+const post = ref();
+
+const postId = computed(() => props.postId);
+
+watch(postId, (val) => {
+  if (val) {
+    $fetch<Post>(`https://jsonplaceholder.typicode.com/posts/${val}`).then(
+      (res) => {
+        post.value = res;
+      }
+    );
+  }
+});
 </script>

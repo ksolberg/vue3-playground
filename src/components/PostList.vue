@@ -8,8 +8,13 @@ const posts = await $fetch<Post[]>(
 <template>
   <ul class="flex flex-col space-y-4">
     <li v-for="post in posts">
-      {{ post.title }}
+      <router-link  :to="`/posts/${post.id}`">{{ post.title }}</router-link>
     </li>
-  </ul>  
-
+  </ul>
 </template>
+
+<style scoped>
+.router-link-active {
+  @apply underline;
+}
+</style>
