@@ -27,7 +27,7 @@ const props = defineProps<{
   postId?: number;
 }>();
 
-const post = ref();
+const post = ref<Post>();
 
 const postId = computed(() => props.postId);
 
