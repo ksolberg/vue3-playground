@@ -5,12 +5,12 @@ import {
   createWebHashHistory,
 } from "vue-router";
 
-import Home from "../pages/Home.vue";
-import Posts from "../pages/Posts.vue";
-import Store from "../pages/Store.vue";
-import Router from "../pages/Router.vue";
-import VueUse from "../pages/VueUse.vue";
-import I18n from "../pages/I18n.vue";
+import Home from "@/pages/Home.vue";
+import Posts from "@/pages/Posts.vue";
+import Store from "@/pages/Store.vue";
+import Router from "@/pages/Router.vue";
+import VueUse from "@/pages/VueUse.vue";
+import I18n from "@/pages/I18n.vue";
 
 const routes: RouteRecordRaw[] = [
   { path: "/", component: Home },

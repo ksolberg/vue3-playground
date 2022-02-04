@@ -20,8 +20,8 @@
 </template>
 
 <script setup lang="ts">
-import PostList from "../components/PostList.vue";
-import PostItem from "../components/PostItem.vue";
+import PostList from "@/components/PostList.vue";
+import PostItem from "@/components/PostItem.vue";
 import { $fetch } from "ohmyfetch";
 import { defineProps, computed, watch, ref } from "vue";
 const props = defineProps<{
