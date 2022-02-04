@@ -7,6 +7,9 @@
       <router-link class="inline-flex py-1 px-3" to="/router"
         >Router</router-link
       >
+      <router-link class="inline-flex py-1 px-3" to="/i18n"
+        >I18n</router-link
+      >
       <router-link class="inline-flex py-1 px-3" to="/vueuse"
         >VueUse</router-link
       >
@@ -24,6 +27,7 @@ import { useHead } from "@vueuse/head";
 import { ref, computed } from "vue";
 
 const isDark = ref(true);
+
 
 const darkClasses = "bg-white dark:bg-slate-900 dark:text-white";
 

@@ -10,6 +10,7 @@ import Posts from "../pages/Posts.vue";
 import Store from "../pages/Store.vue";
 import Router from "../pages/Router.vue";
 import VueUse from "../pages/VueUse.vue";
+import I18n from "../pages/I18n.vue";
 
 const routes: RouteRecordRaw[] = [
   { path: "/", component: Home },
@@ -18,6 +19,7 @@ const routes: RouteRecordRaw[] = [
   { path: "/store", component: Store },
   { path: "/router", component: Router },
   { path: "/vueuse", component: VueUse },
+  { path: "/i18n", component: I18n },
 ];
 
 const routerOptions: RouterOptions = {

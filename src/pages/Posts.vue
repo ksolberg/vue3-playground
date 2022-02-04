@@ -1,4 +1,5 @@
 <template>
+  <p class="text-gray-500 mb-4">Async component and conditionally loading data.</p>
   <div class="flex space-x-10">
     <div class="w-1/2">
       <Suspense>
@@ -22,14 +23,13 @@
 import PostList from "../components/PostList.vue";
 import PostItem from "../components/PostItem.vue";
 import { $fetch } from "ohmyfetch";
-import { defineProps, computed, watch, ref, toRef } from "vue";
+import { defineProps, computed, watch, ref } from "vue";
 const props = defineProps<{
   postId?: number;
 }>();
 
 const post = ref<Post>();
-
-const postId = computed(() => props.postId);
+const postId = computed(() => props.postId); // for the watch
 
 watch(postId, (val) => {
   if (val) {

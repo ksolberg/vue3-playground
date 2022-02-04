@@ -6,9 +6,9 @@ const posts = await $fetch<Post[]>(
 </script>
 
 <template>
-  <ul class="flex flex-col space-y-4">
+  <ul class="flex flex-col space-y-2">
     <li v-for="post in posts">
-      <router-link  :to="`/posts/${post.id}`">{{ post.title }}</router-link>
+      <router-link class="hover:underline" :to="`/posts/${post.id}`">{{ post.title }}</router-link>
     </li>
   </ul>
 </template>
