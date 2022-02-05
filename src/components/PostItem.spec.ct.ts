@@ -14,4 +14,6 @@ it("shows", () => {
       post,
     },
   });
+  cy.get("h1").should("have.text", post.title);
+  cy.get("article > div").should("have.text", post.body);
 });
