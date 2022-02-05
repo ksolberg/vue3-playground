@@ -1,17 +1,20 @@
-# Vue 3 + Typescript + Vite
+# Vue 3 Playground
 
-This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+* Vue 3
+* Composition API
+* TypeScript
+* Pinia
+* Vue Router
+* I18n
+* @ alias
+* Vitest with Coverage and UI
+* Cypress with Component Testing
+* VueUse/*
+* TailwindCSS
+* Ohmyfetch (Same as Nuxt 3 is using)
 
-## Recommended IDE Setup
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+## Resources
 
-## Type Support For `.vue` Imports in TS
-
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's `.vue` type support plugin by running `Volar: Switch TS Plugin on/off` from VSCode command palette.
-
-## Cypress
-
-https://docs.cypress.io/guides/component-testing/introduction#Getting-Started
-
-https://github.com/cypress-io/cypress-component-testing-examples/tree/main/vite-vue
+* https://docs.cypress.io/guides/component-testing/introduction#Getting-Started
+* https://github.com/cypress-io/cypress-component-testing-examples/tree/main/vite-vue
