@@ -20,6 +20,8 @@
       <router-view></router-view>
     </div>
   </div>
+
+  <h1>Hello Vue 3 + Vite</h1>
 </template>
 
 <script setup lang="ts">
