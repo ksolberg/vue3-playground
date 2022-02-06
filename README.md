@@ -2,6 +2,7 @@
 
 * Vue 3
 * Composition API
+* Script setup syntax
 * TypeScript
 * Pinia
 * Vue Router
